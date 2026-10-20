@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Ngày Phụ Nữ Việt Nam Mẹ Hoa</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: linear-gradient(135deg, #fed6e3 0%, #a8c1ef 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        /* Khung thiệp */
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 35px 25px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-width: 500px;
+            width: 90%;
+            max-height: 85vh;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 1.5s ease-out;
+        }
+        .scroll-content {
+            overflow-y: auto;
+            padding-right: 5px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        /* Tùy chỉnh thanh cuộn cho lời chúc dài */
+        .scroll-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        .scroll-content::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.05);
+            border-radius: 10px;
+        }
+        .scroll-content::-webkit-scrollbar-thumb {
+            background: rgba(209, 91, 124, 0.4);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #d15b7c;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+            line-height: 1.4;
+        }
+        p {
+            color: #4a5568;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-indent: 10px;
+        }
+        /* Nút bấm tương tác */
+        .btn-container {
+            text-align: center;
+        }
+        .btn {
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            border: none;
+            color: white;
+            padding: 14px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 117, 140, 0.6);
+        }
+        .btn:active {
+            transform: translateY(1px);
+        }
+        /* Bong bóng bay tự động */
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 55px;
+            height: 70px;
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            animation: floatUp 8s linear infinite;
+        }
+        .balloon::after {
+            content: "▲";
+            color: inherit;
+            font-size: 8px;
+            position: absolute;
+            bottom: -7px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .balloon::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 45px;
+            background-color: rgba(0,0,0,0.12);
+            bottom: -52px;
+            left: 50%;
+        }
+        /* Hiệu ứng Hoa và Trái tim khi bấm nút */
+        .surprise-item {
+            position: absolute;
+            bottom: -50px;
+            font-size: 2rem;
+            user-select: none;
+            pointer-events: none;
+            animation: floatSurprise var(--duration) ease-out forwards;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(-130vh) rotate(20deg); opacity: 0; }
+        }
+        @keyframes floatSurprise {
+            0% { transform: translateY(0) translateX(0) scale(0.5) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-120vh) translateX(var(--drift)) scale(var(--scale)) rotate(var(--rotate)); opacity: 0; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Chúc mừng Ngày Phụ nữ Việt Nam Mẹ Hoa của Con ✨🎉</h1>
+        <div class="scroll-content">
+            <p>hí hí, nhân ngày 20/10 quỳnh quỳnh chúc Mẹ iu luôn bình an, bệnh tật đến đều được hoá giải, da dẻ mịn màng, ăn ngon, ngủ ngonn. Lúc nào cũng ồn ào, nhí nhố, cười hố hố hết, rạng rỡ. Mong cho quán ăn nhà mình luôn ổn định, tiền bạc ngày càng dư dả thêm chút chútt</p>
+            <p>Hì hì, lâu lâu nhà mìn cũng có nhìu chuyện, ngày nào cũng chí choé hết. Nhưng màaaa, đó mới là điểm đặc biệt của nhà mình chìii. Mỗi người cứ một tính cách zị ó, ai cũng có cá tính hếtt cả, khó mà dung hoà được.</p>
+            <p>Nhiều khi mẹ cũng mệt rùii, cũng phải lo lắng cho gia đình mình nhiều, cũng ko có thời gian cho bản thân nhiều nữa, cũng vì con cái và gia đình hết, không phải ai cũng thấu được nỗi lòng của một người Mẹ mà, trân trọng và biết ơn Mẹ iu của Con nhiều lắm</p>
+            <p>Có như nào thì Nhà vẫn là Nhà, bố mẹ vẫn ở đó, vẫn là chỗ dựa, vẫn là điểm tựa tinh thần và là nơi nghỉ ngơi tìm về màaaa, vẫn yêu nhà mìnhh lắm ạaa hihii</p>
+        </div>
+        <div class="btn-container">
+            <button class="btn" onclick="createSurprise()">Tạo Bất Ngờ 🎉</button>
+        </div>
+    </div>
+
+    <script>
+        const colors = ['#ff7675', '#74b9ff', '#a29bfe', '#ffeaa7', '#fab1a0', '#fd79a8', '#55efc4'];
+        const surpriseElements = ['🌹', '🌸', '💐', '❤️', '💖', '💝', '✨'];
+
+        // Tự động thả bong bóng nền
+        function createBackgroundBalloon() {
+            const balloon = document.createElement('div');
+            balloon.classList.add('balloon');
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            balloon.style.backgroundColor = randomColor;
+            balloon.style.color = randomColor;
+            balloon.style.left = Math.random() * 100 + 'vw';
+            const size = Math.floor(Math.random() * 30) + 35; 
+            balloon.style.width = size + 'px';
+            balloon.style.height = (size * 1.25) + 'px';
+            const duration = Math.random() * 4 + 6;
+            balloon.style.animationDuration = duration + 's';
+            
+            document.body.appendChild(balloon);
+            setTimeout(() => balloon.remove(), duration * 1000);
+        }
+        setInterval(createBackgroundBalloon, 1800);
+
+        // Hiệu ứng bất ngờ: Hoa và Trái tim bay
+        function createSurprise() {
+            const totalItems = 50; // Số lượng hoa và tim xuất hiện
+            for (let i = 0; i < totalItems; i++) {
+                setTimeout(() => {
+                    const item = document.createElement('div');
+                    item.classList.add('surprise-item');
+                    
+                    // Chọn ngẫu nhiên hoa hoặc trái tim
+                    item.innerText = surpriseElements[Math.floor(Math.random() * surpriseElements.length)];
+                    
+                    // Thiết lập các thuộc tính bay ngẫu nhiên qua CSS Variables
+                    item.style.left = Math.random() * 100 + 'vw';
+                    item.style.setProperty('--duration', (Math.random() * 2.5 + 2.5) + 's');
+                    item.style.setProperty('--drift', (Math.random() * 200 - 100) + 'px');
+                    item.style.setProperty('--scale', (Math.random() * 0.6 + 0.7));
+                    item.style.setProperty('--rotate', (Math.random() * 360) + 'deg');
+                    
+                    document.body.appendChild(item);
+                    
+                    // Tự động xóa sau khi bay xong
+                    setTimeout(() => item.remove(), 5000);
+                }, i * 60); // Xuất hiện lần lượt tạo hiệu ứng phun trào
+            }
+        }
+    </script>
+</body>
+</html>
